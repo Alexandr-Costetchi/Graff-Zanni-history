@@ -621,7 +621,7 @@ function showNode(node){
 // Поиск
 function doSearch(q){
   q=q.trim().toLowerCase();
-  if(!q){visNodes.update(NODES.map(n=>{const v=buildNode(n);return{id:v.id,color:v.color,borderWidth:v.borderWidth};}))); return;}
+  if(!q){visNodes.update(NODES.map(n=>{const v=buildNode(n);return{id:v.id,color:v.color,borderWidth:v.borderWidth};})); return;}
   NODES.forEach(n=>{
     const hit=n.label.toLowerCase().includes(q)||
               (n.desc&&n.desc.toLowerCase().includes(q))||
@@ -656,3 +656,4 @@ function switchTab(name){
 </script>
 </body>
 </html>
+ 
